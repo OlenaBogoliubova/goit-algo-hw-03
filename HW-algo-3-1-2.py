@@ -13,7 +13,7 @@ def copy_and_sort_recursive(src_path, dest_path='dist'):
                 if item.is_dir():
                     copy_and_sort_recursive(item, dest_path)
                 elif item.is_file():
-                    _, file_extension = item.suffix, item.stem
+                    file_extension = item.suffix
                     dest_subdir = dest_path / file_extension[1:]
                     dest_file_path = dest_subdir / item.name
 
